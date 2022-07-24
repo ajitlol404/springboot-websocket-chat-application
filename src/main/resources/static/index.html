@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Chat room</title>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/5.0.2/css/bootstrap.min.css" />
+</head>
+<body>
+
+	<div id="name-form"
+		class="bg-primary min-vh-100 d-flex align-items-center">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 offset-md-4">
+					<div class="input-group">
+						<input type="text" placeholder="Enter name" id="name-value"
+							class="form-control" />
+						<div class="input-group-append">
+							<button class="btn btn-outline-dark" id="login">Enter</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="chat-room d-none">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card mt-5">
+					<div class="card-header">
+						<h3 id="name-title"></h3>
+					</div>
+						<div class="card-body">
+							<div class="input-group">
+								<input type="text" placeholder="Enter message" id="message-value"
+									class="form-control" />
+								<div class="input-group-append">
+									<button class="btn btn-outline-dark" id="send">Send</button>
+									<button class="btn btn-outline-dark" id="logout">Logout</button>
+								</div>
+							</div>
+							<div class="table-responsive">
+								<table id="message-container-table">
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="/webjars/jquery/3.1.1-1/jquery.min.js"></script>
+	<script src="/webjars/sockjs-client/1.0.2/sockjs.min.js"></script>
+	<script src="/webjars/stomp-websocket/2.3.3/stomp.min.js"></script>
+	<script src="/script.js"></script>
+
+</body>
+</html>
